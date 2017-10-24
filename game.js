@@ -31,7 +31,7 @@ function startCombat(playerName){
 while (player > 0 && almightyG > 0){
    var choice = (prompt("ATTACK OR QUIT?"));
    if (choice === "quit" || choice === "Quit"){
-      console.log("Winners never quit and Quitters never win");
+      console.log("Winners never quit and quitters NEVER WIN");
       break;
    } else if(choice === "attack" || choice === "Attack"){
      player -= battleDamage();
@@ -46,7 +46,7 @@ while (player > 0 && almightyG > 0){
       console.log("NEXT ROUND STARTING:")
 
   } else if (player === 0 || games < 0){
-      console.log("GAME OVER");
+      console.log("GAME OVER!");
   }
   }
 
