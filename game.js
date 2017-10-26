@@ -1,5 +1,64 @@
 //Game:
 
+var start = document.getElementById("start");
+var playerName = "player";
+
+start.onclick = function startGame(){
+  document.getElementById("start").style.display = "none";
+  var playerName = (prompt("Please enter your name:"));
+  document.getElementById("second_page").style.display = "block";
+}
+
+//Attack Button:
+var startAttack = document.getElementById("attack");
+startAttack.onclick = function startCombat() {
+  document.getElementById("pScore").value = ( player.health -= almightyG.generateAttackDamage() );
+  document.getElementById("gScore").value = ( almightyG.health -= player.generateAttackDamage() );
+  console.log(player.health, almightyG.health);
+  document.getElementById("playerScore").innerHTML = player.health;
+  document.getElementById("grantScore").innerHTML = almightyG.health;
+}
+
+//Heal Button:
+var healing = document.getElementById("heal");
+healing.onclick = function () {
+  player.heal();
+  document.getElementById("playerScore").innerHTML = player.health;
+  document.getElementById("pScore").value = player.health;
+  console.log(player.health);
+}
+
+//Quit Button:
+
+var quitter = document.getElementById("quit");
+  quitter.onclick = function () {
+  document.getElementById("scoring").innerHTML = "Winners never quit and quitters never win.";
+}
+
+//Player Object:
+var player = {
+name: null,
+health: 40,
+wins: 0,
+healCount: 0,
+generateAttackDamage: function() {
+  return Math.floor(Math.random() * 3) + 1},
+heal: function(){
+  return this.health += Math.floor(Math.random() * 10) + 1;}
+};
+
+//AlmightyG Object:
+var almightyG = {
+name: "The Almighty Grant",
+health: 10,
+generateAttackDamage: function() { return Math.floor(Math.random() * 5) + 1}
+};
+
+
+
+
+/*Game refactored with Objects:
+
 function playGame(){
 
   var playGame = (prompt("The Almighty Grant challenges you to a game! Do you want to play?"));
@@ -82,3 +141,4 @@ while (player.health > 0 && almightyG.health > 0 && player.wins < 3){
   }
   }
 }
+*/
