@@ -1,0 +1,31 @@
+body{
+  background-color: lightsteelblue;
+
+}
+
+button {
+  background-color: teal;
+  color: rgba(190, 217, 249, 1);
+  height: 50px;
+  width: 150px;
+  font-size: 120%;
+  text-align: center;
+  margin-top: 200px;
+}
+
+div {
+  display: block;
+  text-align: center;
+}
+
+#first_page {
+  display: contents;
+}
+
+#second_page {
+  display: none;
+}
+
+progress {
+  background-color: blue;
+}
