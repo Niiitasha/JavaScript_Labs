@@ -3,6 +3,20 @@ body{
 
 }
 
+#keepScore{
+  margin-top: 50px;
+}
+
+#playerStats {
+ margin-top: 125px;
+}
+
+#grant {
+  margin-top: 50px;
+  margin-right: 400px;
+  display: inline-block;
+}
+
 button {
   background-color: teal;
   color: rgba(190, 217, 249, 1);
@@ -28,4 +42,9 @@ div {
 
 progress {
   background-color: blue;
+}
+
+#scoring {
+  text-align: center;
+  color: deeppink;
 }
